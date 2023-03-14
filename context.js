@@ -25,6 +25,7 @@ function GlobalProvider(props) {
 
   const value = {
     isCookieBarOpen,
+    onCookieBarClose,
   };
 
   return (

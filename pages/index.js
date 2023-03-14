@@ -8,7 +8,7 @@ import styles from "../styles/Home.module.css";
 
 export default function Home() {
   const state = useContext(GlobalStateContext);
-
+  console.log(state);
   return (
     <div className={styles.container}>
       <Head>
@@ -71,7 +71,7 @@ export default function Home() {
         </a>
       </footer>
 
-      <CookieBar />
+      {state.isCookieBarOpen && <CookieBar onAccept={state.onCookieBarClose} />}
     </div>
   );
 }

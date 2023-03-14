@@ -1,8 +1,8 @@
-import { Container, Typography, Button } from '@mui/material'
-import styles from './CookieBar.module.css'
+import { Container, Typography, Button } from "@mui/material";
+import styles from "./CookieBar.module.css";
 
 export default function CookieBar(props) {
-  const { title, bodyText } = props
+  const { title, bodyText, onAccept } = props;
 
   return (
     <div className={styles.root}>
@@ -12,14 +12,20 @@ export default function CookieBar(props) {
         </Typography>
 
         <Typography paragraph>
-          Come and get them, lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis,
-          molestias at. Ullam aperiam totam consequuntur? A asperiores minus temporibus deserunt!
+          Come and get them, lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Reiciendis, molestias at. Ullam aperiam totam consequuntur? A
+          asperiores minus temporibus deserunt!
         </Typography>
 
-        <Button variant="contained" color="inherit" className={styles.button}>
+        <Button
+          onClick={onAccept}
+          variant="contained"
+          color="inherit"
+          className={styles.button}
+        >
           Accept
         </Button>
       </Container>
     </div>
-  )
+  );
 }
